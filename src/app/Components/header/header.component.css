@@ -1,0 +1,14 @@
+.cart{
+    border: none;
+    height: 20px;
+    width: 30px;   
+    border-radius: 10px; 
+    color: white;
+}
+.btncart{
+    border: none;
+    background-color: none;
+}
+.btncart:hover{
+    background-color: none;
+}

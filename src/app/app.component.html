@@ -1,24 +1,7 @@
-<nav class="navbar navbar-light bg-danger">
-  <div class="container-fluid">
-    <a class="navbar-brand text-light">TenderCuts</a>
-    <div class="d-flex">
-      <button class="btncart btn-danger"><mat-icon class="cart">add_shopping_cart</mat-icon>
-      </button>
-    </div>
-  </div>
-</nav>
+<app-header></app-header>
 <div class="container">
-  <div class="card-group">
-    <div class="row" *ngFor="let product of Products">
-        <div class="card">
-          <img [src]="product.imageUrl" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h6 class="card-title">{{ product.name }}</h6>
-            <h5 class="card-text">{{ product.price }}</h5>
-            <button class="btn btn-danger">ADD</button>
-          </div>
-        </div>
-    </div>
-  </div>
-  
+    <app-cards></app-cards>
 </div>
+   
+  
+  

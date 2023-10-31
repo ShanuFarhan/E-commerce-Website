@@ -1,0 +1,20 @@
+<div class="row" *ngIf="products$ | async as products"  >
+    <div class="col-lg-4" *ngFor="let product of products">
+      <div class="card mb-3">
+        <div class="card-body">
+        <img [src]='product.img' class="card-img" alt="">
+        <h5 class="card-title">{{ product.name }}</h5>
+        <h5 class="card-text">{{ product.price | currency : 'INR' : 'symbol' : '1.0-0' }}</h5>
+        <div class="text-center">
+          <div *ngIf="showCounter">
+        <button class="btn btn-danger text-light counterbtn m-2" (click)="handleIncrease()">+</button>
+        <span>{{count}}</span>
+        <button class="btn btn-danger text-light counterbtn m-2" (click)="handleDecrease()">-</button>
+      </div>
+        <button *ngIf="!showCounter" (click)="showCounter = true" class="btn btn-danger">ADD TO CART</button>
+      </div>
+      </div>
+    </div>
+</div>
+</div>
+
